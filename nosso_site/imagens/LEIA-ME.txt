@@ -1,0 +1,4 @@
+Coloque aqui suas imagens (.jpg, .png ou .webp).
+O nome do arquivo precisa ser igual ao campo "imagem" ou "galeria" do projeto no script.js.
+Use letras minúsculas, sem espaço e sem acento. Exemplo: convite-ana-rafael.jpg
+Dica: reduza as fotos para uns 1600 px de largura para o site abrir rápido.

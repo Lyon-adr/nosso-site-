@@ -1,0 +1,3 @@
+Coloque aqui seus arquivos .mp4 (vídeos e coreografias).
+O nome do arquivo precisa ser igual ao campo "video" do projeto no script.js.
+Use letras minúsculas, sem espaço e sem acento. Exemplo: coreografia-valsa.mp4

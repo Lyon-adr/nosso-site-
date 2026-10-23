@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Portfólio da equipe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="notice" id="notice">
+      <div class="wrap notice-in">
+        <p>
+          Versão de exemplo. Os projetos, nomes e textos são fictícios. Coloque
+          seus .mp3 na pasta audio e seus .mp4 na pasta videos.
+        </p>
+        <button type="button" id="notice-x">Fechar</button>
+      </div>
+    </div>
+
+    <header class="bar">
+      <div class="wrap bar-in">
+        <a class="brand" href="#topo">Divina Comédia</a>
+        <nav class="nav" aria-label="Seções">
+          <a href="#trabalhos">Trabalhos</a>
+          <a href="#cronograma">Cronograma</a>
+          <a href="#precos">Valores</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <span class="tc" id="tc" aria-hidden="true">00:00:00:00</span>
+      </div>
+      <div class="scrub" aria-hidden="true"><i id="scrub-fill"></i></div>
+    </header>
+
+    <main>
+      <section class="hero" id="topo">
+        <div class="wrap">
+          <p class="eyebrow">
+            Design, vídeo, música e coreografia para eventos
+          </p>
+          <h1>
+            O <span class="d">convite</span>, o <span class="v">vídeo</span>, a
+            <span class="m">música</span> e a
+            <span class="co">coreografia</span> do seu evento, feitos na mesma
+            mesa.
+          </h1>
+          <p class="lede">
+            Eu desenho o convite, edito o vídeo que abre o evento e o resumo que
+            sai depois, preparo as músicas e monto a coreografia da entrada, da
+            valsa e da pista. Como tudo passa por uma pessoa só, as cores, o
+            ritmo e o clima combinam do começo ao fim.
+          </p>
+          <div class="cta">
+            <a class="btn" href="#trabalhos">Ver trabalhos</a>
+            <a class="btn ghost" href="#contato">Pedir orçamento</a>
+          </div>
+
+          <div
+            class="tl"
+            aria-label="O dia do evento, hora a hora, com o que cada área entrega"
+          >
+            <div class="tl-head">
+              <span>O dia do evento, hora a hora</span>
+              <span
+                >Passe o mouse para percorrer. Clique num trecho para ver o
+                projeto.</span
+              >
+            </div>
+            <div class="tl-scroll">
+              <div class="tl-body" id="tlbody">
+                <div class="ruler-row">
+                  <div></div>
+                  <div
+                    class="ruler"
+                    id="ruler"
+                    role="slider"
+                    tabindex="0"
+                    aria-label="Horário do evento"
+                    aria-valuemin="0"
+                    aria-valuemax="360"
+                    aria-valuenow="112"
+                    aria-valuetext="20:52"
+                  >
+                    <span style="left: 0%">19:00</span
+                    ><span style="left: 16.667%">20:00</span
+                    ><span style="left: 33.333%">21:00</span
+                    ><span style="left: 50%">22:00</span
+                    ><span style="left: 66.667%">23:00</span
+                    ><span style="left: 83.333%">00:00</span
+                    ><span style="left: 100%">01:00</span>
+                  </div>
+                </div>
+                <div class="lane" style="--c: var(--design)">
+                  <div class="lane-name">Design</div>
+                  <div class="lane-track" id="lane-design"></div>
+                </div>
+                <div class="lane" style="--c: var(--video)">
+                  <div class="lane-name">Vídeo</div>
+                  <div class="lane-track" id="lane-video"></div>
+                </div>
+                <div class="lane" style="--c: var(--music)">
+                  <div class="lane-name">Música</div>
+                  <div class="lane-track" id="lane-music"></div>
+                </div>
+                <div class="lane" style="--c: var(--coreo)">
+                  <div class="lane-name">Coreografia</div>
+                  <div class="lane-track" id="lane-coreo"></div>
+                </div>
+                <div class="ruler-row tl-foot">
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="head" aria-hidden="true">
+                  <span class="flag" id="flag">20:52</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="trabalhos">
+        <div class="wrap">
+          <p class="eyebrow">Trabalhos</p>
+          <h2>Projetos de eventos, do convite à última dança</h2>
+          <p class="sec-sub">
+            Filtre por área ou por tipo de evento. Abra “Como foi feito” em cada
+            projeto para ver o pedido, o que eu fiz e o resultado.
+          </p>
+
+          <div class="filters">
+            <div
+              class="chips"
+              id="f-track"
+              role="group"
+              aria-label="Filtrar por área"
+            >
+              <button
+                type="button"
+                class="chip"
+                data-v="all"
+                aria-pressed="true"
+              >
+                Todas as áreas
+              </button>
+              <button
+                type="button"
+                class="chip"
+                data-v="design"
+                data-t
+                style="--c: var(--design)"
+                aria-pressed="false"
+              >
+                Design
+              </button>
+              <button
+                type="button"
+                class="chip"
+                data-v="video"
+                data-t
+                style="--c: var(--video)"
+                aria-pressed="false"
+              >
+                Vídeo&Coreografia
+              </button>
+              <button
+                type="button"
+                class="chip"
+                data-v="music"
+                data-t
+                style="--c: var(--music)"
+                aria-pressed="false"
+              >
+                Música
+              </button>
+            </div>
+            <div
+              class="chips"
+              id="f-event"
+              role="group"
+              aria-label="Filtrar por tipo de evento"
+            >
+              <button
+                type="button"
+                class="chip"
+                data-v="all"
+                aria-pressed="true"
+              >
+                Todos os eventos
+              </button>
+              <button
+                type="button"
+                class="chip"
+                data-v="15 anos"
+                aria-pressed="false"
+              >
+                15 anos
+              </button>
+              <button
+                type="button"
+                class="chip"
+                data-v="casamento"
+                aria-pressed="false"
+              >
+                Casamento
+              </button>
+            </div>
+          </div>
+          <p class="count" id="count" aria-live="polite"></p>
+          <div class="grid" id="grid"></div>
+          <p class="empty" id="empty" hidden>Nenhum projeto com esse filtro.</p>
+        </div>
+      </section>
+
+      <section class="section" id="cronograma">
+        <div class="wrap">
+          <p class="eyebrow">Cronograma</p>
+          <h2>Quando cada trabalho precisa começar</h2>
+          <p class="sec-sub">
+            Cada área começa com uma antecedência diferente. Os prazos são
+            contados a partir do dia do evento (D-0).
+          </p>
+          <ul class="lead" aria-label="Antecedência de cada área">
+            <li style="--c: var(--coreo)">
+              <b>Coreografia</b><span>1 ano antes</span>
+            </li>
+            <li style="--c: var(--design)">
+              <b>Design</b><span>3 meses antes</span>
+            </li>
+            <li style="--c: var(--video)">
+              <b>Vídeo</b><span>3 meses antes</span>
+            </li>
+            <li style="--c: var(--music)">
+              <b>Música</b><span>1 mês antes</span>
+            </li>
+          </ul>
+          <ol class="plan">
+            <li style="--c: var(--coreo)">
+              <span class="d">D-365</span><span class="dot"></span>
+              <div class="txt">
+                <strong>Briefing e início dos ensaios</strong
+                ><span class="tr">Coreografia</span>
+                <p>
+                  Conversa sobre o estilo, a música e quem vai dançar. Montamos
+                  o calendário de ensaios até o evento.
+                </p>
+              </div>
+            </li>
+            <li style="--c: var(--coreo)">
+              <span class="d">D-180</span><span class="dot"></span>
+              <div class="txt">
+                <strong>Coreografia montada</strong
+                ><span class="tr">Coreografia</span>
+                <p>
+                  Os passos estão fechados. Daqui até o evento, os ensaios
+                  servem para treinar e ajustar.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="d">D-90</span><span class="dot"></span>
+              <div class="txt">
+                <strong>Briefing de design e vídeo</strong
+                ><span class="tr">Design e vídeo</span>
+                <p>
+                  Definimos o estilo, as cores e o que entra no convite e no
+                  vídeo de abertura.
+                </p>
+              </div>
+            </li>
+            <li style="--c: var(--design)">
+              <span class="d">D-75</span><span class="dot"></span>
+              <div class="txt">
+                <strong>Identidade e convite</strong
+                ><span class="tr">Design</span>
+                <p>
+                  Monograma, paleta e convite aprovados. Daqui saem as cores do
+                  vídeo e do telão.
+                </p>
+              </div>
+            </li>
+            <li style="--c: var(--video)">
+              <span class="d">D-60</span><span class="dot"></span>
+              <div class="txt">
+                <strong>Material e roteiro do vídeo</strong
+                ><span class="tr">Vídeo</span>
+                <p>
+                  Chegam fotos, vídeos e depoimentos. Eu organizo por ordem e
+                  escrevo o roteiro.
+                </p>
+              </div>
+            </li>
+            <li style="--c: var(--music)">
+              <span class="d">D-30</span><span class="dot"></span>
+              <div class="txt">
+                <strong>Briefing das músicas</strong
+                ><span class="tr">Música</span>
+                <p>
+                  Escolha das músicas, do andamento e do tom, incluindo a música
+                  da coreografia.
+                </p>
+              </div>
+            </li>
+            <li style="--c: var(--video)">
+              <span class="d">D-14</span><span class="dot"></span>
+              <div class="txt">
+                <strong>Primeira edição do vídeo</strong
+                ><span class="tr">Vídeo</span>
+                <p>
+                  Você recebe a primeira versão do vídeo de abertura e pede os
+                  ajustes.
+                </p>
+              </div>
+            </li>
+            <li style="--c: var(--music)">
+              <span class="d">D-10</span><span class="dot"></span>
+              <div class="txt">
+                <strong>Trilhas prontas</strong><span class="tr">Música</span>
+                <p>
+                  Entrada, valsa e pista com andamento e tom definidos, prontas
+                  para ouvir.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="d">D-7</span><span class="dot"></span>
+              <div class="txt">
+                <strong>Aprovação final</strong>
+                <p>
+                  Convite, vídeo, músicas e coreografia aprovados e testados com
+                  o som e o telão do local.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="d">D-0</span><span class="dot"></span>
+              <div class="txt">
+                <strong>O evento</strong>
+                <p>
+                  Cobertura em vídeo, cada trilha pronta no horário do seu
+                  momento e a coreografia no horário combinado.
+                </p>
+              </div>
+            </li>
+            <li style="--c: var(--video)">
+              <span class="d">D+7</span><span class="dot"></span>
+              <div class="txt">
+                <strong>Entrega final</strong><span class="tr">Vídeo</span>
+                <p>
+                  Resumo para as redes e os arquivos completos para guardar.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="precos">
+        <div class="wrap">
+          <p class="eyebrow">Valores</p>
+          <h2>Quanto custa</h2>
+          <p class="sec-sub">
+            Valores de referência. O preço final depende da data, do tamanho do
+            evento e do que você precisa, pedidos feitos com ugência para prazos mais curtos, terão elevação de Valores.
+          </p>
+
+          <div class="precos">
+            <article class="preco" style="--c: var(--design)">
+              <span class="kicker">convites digitais</span>
+              <h3>Convite e identidade</h3>
+              <p class="preco-valor"><small>a partir de</small>R$ 000</p>
+              <ul>
+                <li>Convite digital personalizados para você</li>
+                <li>Monograma e paleta de cores</li>
+                <li>2 rodadas de ajustes</li>
+                <li>Peça com 3 meses de antecedência</li>
+              </ul>
+              <a class="btn ghost" href="#contato">Pedir orçamento</a>
+            </article>
+
+            <article class="preco" style="--c: var(--video)">
+              <span class="kicker">Vídeo</span>
+              <h3>Edição de vídeo</h3>
+              <p class="preco-valor"><small>a partir de</small>R$ 120</p>por vídeo
+              <ul>
+                <li>Vídeo de apresentação ou retrospectiva</li>
+                <li>Trilha e legendas</li>
+                <li>2 rodadas de ajustes</li>
+                <li>Peça com 3 meses de antecedência</li>
+              </ul>
+              <a class="btn ghost" href="#contato">Pedir orçamento</a>
+            </article>
+
+            <article class="preco" style="--c: var(--music)">
+              <span class="kicker">Música</span>
+              <h3>Trilhas para o evento</h3>
+              <p class="preco-valor"><small>a partir de</small>R$ 60,00</p>por musica
+              <ul>
+                <li>Entrada, valsa ou mixagem da pista</li>
+                <li>Andamento e tom escolhidos por você</li>
+                <li>Arquivo em mp3 para o dia</li>
+                <li>Peça com 1 mês de antecedência</li>
+              </ul>
+              <a class="btn ghost" href="#contato">Pedir orçamento</a>
+            </article>
+
+            <article class="preco" style="--c: var(--coreo)">
+              <span class="kicker">Coreografia</span>
+              <h3>Coreografia para o evento</h3>
+              <p class="preco-valor"><small>a partir de</small>R$ 000</p>
+              <ul>
+                <li>Coreografia para a sua festa, casamento ou evento</li>
+                <li>Ensaios até o dia do evento</li>
+                <li>estilos diversos de danças</li>
+                <li>Peça com 1 ano de antecedência</li>
+              </ul>
+              <a class="btn ghost" href="#contato">Pedir orçamento</a>
+            </article>
+
+            <article class="preco" style="--c: var(--fg)">
+              <span class="kicker">convite/site</span>
+              <h3>HTML personalizado</h3>
+              <p class="preco-valor"><small>a partir de</small>R$ 000</p>
+              <ul>
+                <li>
+                  Página sob medida: convites interativos, retrospectivas ou site do evento animado com musica
+                </li>
+                <li>Feita para abrir bem no celular e funcionar em diversos dispositivos</li>
+                <li>peça com 3 meses de antecedência</li>
+                <li>2 rodadas de ajustes</li>
+              </ul>
+              <a class="btn ghost" href="#contato">Pedir orçamento</a>
+            </article>
+          </div>
+
+          <p class="preco-nota">
+            Quer vários juntos? O pacote completo tem desconto. Fale comigo para
+            fechar o valor.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="contato">
+        <div class="wrap">
+          <p class="eyebrow">Sobre e contato</p>
+          <h2>Vamos montar o seu evento</h2>
+          <div class="about" style="margin-top: 28px">
+            <div>
+              <p>
+                Faço convites, vídeos e músicas para eventos como festas de 15
+                anos e casamentos. Cuido do briefing até a entrega, então você
+                fala com uma pessoa só e recebe tudo combinando.
+              </p>
+              <p>
+                Para pedir um orçamento, mande a data e o tipo de evento e diga
+                o que você quer: só o convite, só o vídeo, só a música ou o
+                pacote completo.
+              </p>
+            </div>
+            <div class="contact">
+              <div class="row">
+                <span class="k">E-mail</span
+                ><code id="v-mail">seu-email@exemplo.com</code
+                ><button
+                  type="button"
+                  data-copy="seu-email@exemplo.com"
+                  data-target="v-mail"
+                >
+                  Copiar
+                </button>
+              </div>
+              <div class="row">
+                <span class="k">WhatsApp</span
+                ><code id="v-zap">(00) 00000-0000</code
+                ><button
+                  type="button"
+                  data-copy="(00) 00000-0000"
+                  data-target="v-zap"
+                >
+                  Copiar
+                </button>
+              </div>
+              <div class="row">
+                <span class="k">Instagram</span><code id="v-ig">@seuperfil</code
+                ><button
+                  type="button"
+                  data-copy="@seuperfil"
+                  data-target="v-ig"
+                >
+                  Copiar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>00:03:20:00 · fim</span>
+        <span>© 2026 Lyon Hartlless</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

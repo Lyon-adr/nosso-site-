@@ -1,0 +1,3 @@
+Coloque aqui seus arquivos .mp3.
+O nome do arquivo precisa ser igual ao campo "audio" do projeto no script.js.
+Use letras minúsculas, sem espaço e sem acento. Exemplo: valsa-dos-15-anos.mp3
